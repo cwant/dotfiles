@@ -9,15 +9,11 @@
 (setq-default indent-tabs-mode nil) 
 (setq-default tab-width 2)
 (setq c-default-style "bsd" c-basic-offset 2)
-(defun my-python-mode-hook ()
-  (setq indent-tabs-mode nil))
+(defun my-python-mode-hook () (setq indent-tabs-mode nil))
 (add-hook 'python-mode-hook
-          (function (lambda ()
-                      (setq indent-tabs-mode nil
-                            tab-width 2))))
+  (function (lambda () (setq indent-tabs-mode nil tab-width 2))))
 (add-hook 'python-mode-hook 'my-python-mode-hook)
-(add-hook 'python-mode-hook '(lambda () 
- (setq python-indent 2)))
+(add-hook 'python-mode-hook '(lambda () (setq python-indent 2)))
 
 (add-hook 'c-mode-hook 'my-python-mode-hook)
 
@@ -31,6 +27,8 @@
 
 (setq initial-scratch-message "")
 
+(normal-erase-is-backspace-mode 0)
+
 (setq backup-directory-alist `(("." . "~/.saves")))
 (setq backup-by-copying t)
 (setq delete-old-versions t
@@ -38,3 +36,5 @@
   kept-old-versions 2
   version-control t)
 (setq electric-indent-mode nil)
+(setq ruby-insert-encoding-magic-comment nil)
+(setq js-indent-level 2)
