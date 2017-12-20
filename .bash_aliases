@@ -1,0 +1,7 @@
+alias ls='ls -a'
+alias grep='grep -s'
+alias less='less -XF'
+alias reboot='echo "No way Jose"'
+alias ansible-vault='ansible-vault --vault-password-file=/home/cwant/.vault'
+alias emacs='emacs -nw'
+alias ssh='ssh -o ServerAliveInterval=300'
