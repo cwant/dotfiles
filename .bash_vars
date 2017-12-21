@@ -1,0 +1,8 @@
+export EDITOR=emacs
+export PAGER=less
+export IGNOREEOF=2
+if [ -z "$CONSOLE_FILE" ]; then
+  export CONSOLE_FILE=${HOME}/console.txt
+  export PROMPT_COMMAND='echo `date "+%d %b %T"` --`whoami`-- `history 1 | cut -f 3 | head -c 256` >> $CONSOLE_FILE'
+fi
+
