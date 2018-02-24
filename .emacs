@@ -11,9 +11,9 @@
 (setq c-default-style "bsd" c-basic-offset 2)
 (defun my-python-mode-hook () (setq indent-tabs-mode nil))
 (add-hook 'python-mode-hook
-  (function (lambda () (setq indent-tabs-mode nil tab-width 2))))
+  (function (lambda () (setq indent-tabs-mode nil tab-width 4))))
 (add-hook 'python-mode-hook 'my-python-mode-hook)
-(add-hook 'python-mode-hook '(lambda () (setq python-indent 2)))
+(add-hook 'python-mode-hook '(lambda () (setq python-indent 4)))
 
 (add-hook 'c-mode-hook 'my-python-mode-hook)
 
@@ -38,3 +38,4 @@
 (setq electric-indent-mode nil)
 (setq ruby-insert-encoding-magic-comment nil)
 (setq js-indent-level 2)
+(setq mouse-wheel-progressive-speed nil)
